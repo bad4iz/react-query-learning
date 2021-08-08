@@ -5,12 +5,19 @@ const useGetPlanet = (planetURL) => {
   return useQuery(
     ['planet', planetURL],
     () => {
-      return fetch(planetURL).then((res) =>
-        res.json(),
+      return new Promise((resolve) =>
+        setTimeout(resolve, 3000),
+      ).then(() =>
+        fetch(planetURL).then((res) =>
+          res.json(),
+        ),
       );
     },
     {
       enabled: !!planetURL,
+      initialData: {
+        name: 'initial name',
+      },
     },
   );
 };
