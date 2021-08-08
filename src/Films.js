@@ -1,5 +1,6 @@
 import { useQuery } from 'react-query';
 import { useState } from 'react';
+import { Planet } from './Planet';
 
 const useGetFilm = (film) =>
   useQuery(
@@ -33,6 +34,12 @@ const SearchFilm = ({ film }) => {
         : results.map((film) => (
             <div key={film.title}>
               {film.title}
+              {film.planets.map((planet) => (
+                <Planet
+                  key={planet}
+                  planetUrl={planet}
+                />
+              ))}
             </div>
           ))}
       <br />
