@@ -1,13 +1,6 @@
 import { useQuery } from 'react-query';
 import { useState } from 'react';
 
-const useGetFilms = () =>
-  useQuery('films', async () => {
-    return fetch(
-      'http://swapi.dev/api/films',
-    ).then((res) => res.json());
-  });
-
 const useGetFilm = (film) =>
   useQuery(
     film,
