@@ -1,5 +1,5 @@
 # React Query learning
-## 19. реализуем подобие пагинации | react-query
+## 20. инициализируем наши данные из кэша | react-query
 ### [видео]()  
 ### [плейлист react-query на youtube](https://youtube.com/playlist?list=PL5MDzsMECm45ZzoJ0F2-50aAvbbNd47_E)
 
