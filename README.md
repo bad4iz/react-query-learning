@@ -1,6 +1,7 @@
 # React Query learning
-
-[плейлист react-query на youtube](https://youtube.com/playlist?list=PL5MDzsMECm45ZzoJ0F2-50aAvbbNd47_E)
+## 19. реализуем подобие пагинации | react-query
+### [видео]()  
+### [плейлист react-query на youtube](https://youtube.com/playlist?list=PL5MDzsMECm45ZzoJ0F2-50aAvbbNd47_E)
 
 ## Available Scripts
 In the project directory, you can run:

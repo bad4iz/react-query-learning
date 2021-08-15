@@ -1,65 +1,40 @@
-import { useQuery } from 'react-query';
 import { useState } from 'react';
-import { Planet } from './Planet';
+import FilmPage from './FilmPage';
+import { useQuery } from 'react-query';
 
-const useGetFilm = (film) =>
-  useQuery(
-    film,
-    async () => {
-      return fetch(
-        `http://swapi.dev/api/films?search=${film}`,
-      ).then((res) => res.json());
-    },
-    {
-      enabled: !!film,
-    },
+const useGetFilms = () =>
+  useQuery(['films'], () =>
+    fetch('http://swapi.dev/api/films').then(
+      (res) => res.json(),
+    ),
   );
-
-const SearchFilm = ({ film }) => {
-  const {
-    data: { results = [] } = {},
-    isLoading,
-    error,
-    isError,
-    isFetching,
-  } = useGetFilm(film);
-
-  return (
-    <div>
-      {' '}
-      {isLoading
-        ? 'Loading ...'
-        : isError
-        ? error.message
-        : results.map((film) => (
-            <div key={film.title}>
-              {film.title}
-              {film.planets.map((planet) => (
-                <Planet
-                  key={planet}
-                  planetUrl={planet}
-                />
-              ))}
-            </div>
-          ))}
-      <br />
-      {isFetching ? 'Обновление ...' : null}
-    </div>
-  );
-};
 
 const Films = ({ queryKey }) => {
-  const [film, setFilm] = useState('');
+  const [filmUrl, setFilmUrl] = useState('');
 
-  return (
-    <div>
-      <input
-        type="text"
-        value={film}
-        onChange={(e) => setFilm(e.target.value)}
-      />
-      <SearchFilm film={film} />
-    </div>
+  const { data } = useGetFilms();
+
+  return filmUrl ? (
+    <>
+      <button onClick={() => setFilmUrl('')}>
+        back
+      </button>
+      <FilmPage url={filmUrl} />
+    </>
+  ) : (
+    <ul>
+      {data?.results?.map((film) => (
+        <li key={film.url}>
+          <b>Film:</b>
+          <a
+            href="#"
+            onClick={() => setFilmUrl(film.url)}
+          >
+            {film.title}
+          </a>
+        </li>
+      ))}
+    </ul>
   );
 };
 
