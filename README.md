@@ -2,9 +2,7 @@
 
 [плейлист react-query на youtube](https://youtube.com/playlist?list=PL5MDzsMECm45ZzoJ0F2-50aAvbbNd47_E)
 
-Само видео [16. настраиваем повтор запроса при ошибке | react-query](https://youtu.be/QdLzA6NtAPU)
 ## Available Scripts
-
 In the project directory, you can run:
 
 ### `yarn start`
