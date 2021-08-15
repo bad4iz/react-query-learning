@@ -3,21 +3,12 @@ import { useQuery } from 'react-query';
 import { queryClient } from './App';
 
 const useGetFilm = (url) =>
-  useQuery(
-    ['film', url],
-    () =>
-      new Promise((resolve) =>
-        setTimeout(resolve, 2000),
-      ).then(() =>
-        fetch(url).then((res) => res.json()),
-      ),
-    {
-      initialData: queryClient
-        .getQueryData('films')
-        ?.results?.find(
-          (film) => film.url === url,
-        ),
-    },
+  useQuery(['film', url], () =>
+    new Promise((resolve) =>
+      setTimeout(resolve, 2000),
+    ).then(() =>
+      fetch(url).then((res) => res.json()),
+    ),
   );
 
 const FilmPage = ({ url }) => {
