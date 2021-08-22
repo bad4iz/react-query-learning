@@ -1,5 +1,5 @@
 # React Query learning
-## 22. обрабатываем положительный ответ | react-query
+## 24. обновляем наши данные программно | react-query
 ### [видео]()  
 ### [плейлист react-query на youtube](https://youtube.com/playlist?list=PL5MDzsMECm45ZzoJ0F2-50aAvbbNd47_E)
 

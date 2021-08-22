@@ -2,6 +2,7 @@ import { useState } from 'react';
 import FilmPage from './FilmPage';
 import { useQuery } from 'react-query';
 import { queryClient } from './App';
+import { Link } from 'react-router-dom';
 
 const useGetFilms = () =>
   useQuery(['films'], () =>
@@ -19,28 +20,21 @@ const useGetFilms = () =>
   );
 
 const Films = ({ queryKey }) => {
-  const [filmUrl, setFilmUrl] = useState('');
-
   const { data } = useGetFilms();
 
-  return filmUrl ? (
-    <>
-      <button onClick={() => setFilmUrl('')}>
-        back
-      </button>
-      <FilmPage url={filmUrl} />
-    </>
-  ) : (
+  return (
     <ul>
       {data?.map((film) => (
         <li key={film.url}>
           <b>Film:</b>
-          <a
-            href="#"
-            onClick={() => setFilmUrl(film.url)}
+          <Link
+            to={film.url.replace(
+              /https:\/\/swapi.dev\/api\/films\//g,
+              '',
+            )}
           >
             {film.title}
-          </a>
+          </Link>
         </li>
       ))}
     </ul>
