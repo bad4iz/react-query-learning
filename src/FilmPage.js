@@ -1,19 +1,29 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import { useQuery } from 'react-query';
 import { queryClient } from './App';
 
-const useGetFilm = (url) =>
-  useQuery(['film', url], () =>
-    new Promise((resolve) =>
-      setTimeout(resolve, 2000),
-    ).then(() =>
-      fetch(url).then((res) => res.json()),
-    ),
-  );
-
 const FilmPage = ({ url }) => {
+  const [count, increment] = useReducer(
+    (c) => c + 1,
+    0,
+  );
   const { data, isLoading, isFetching } =
-    useGetFilm(url);
+    useQuery(
+      ['film', url],
+      () =>
+        new Promise((resolve) =>
+          setTimeout(resolve, 2000),
+        ).then(() =>
+          fetch(url).then((res) => res.json()),
+        ),
+      {
+        onSuccess: (data) => {
+          increment();
+        },
+        onError: (error) => {},
+        onSettled: (data, error) => {},
+      },
+    );
 
   return isLoading ? (
     <div>Загрузка ...</div>
@@ -25,7 +35,9 @@ const FilmPage = ({ url }) => {
         <strong>description:</strong>
         <p>{data.opening_crawl}</p>
       </div>
-      {isFetching ? 'Обновление ...' : null}
+      {isFetching
+        ? `Обновление ... #${count}`
+        : null}
     </>
   );
 };
