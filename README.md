@@ -1,6 +1,6 @@
 # React Query learning
 ## 22. обрабатываем положительный ответ | react-query
-### [видео]()  
+[![22. обрабатываем положительный ответ | react-query](https://img.youtube.com/vi/9oVnz5IolbI/0.jpg)](https://youtu.be/9oVnz5IolbI)
 ### [плейлист react-query на youtube](https://youtube.com/playlist?list=PL5MDzsMECm45ZzoJ0F2-50aAvbbNd47_E)
 
 ## Available Scripts
