@@ -1,5 +1,5 @@
 # React Query learning
-## 23. подключаем react router и приходим туда от куда жмякали | react-query
+## 24. обновляем наши данные программно | react-query
 ### [видео]()  
 ### [плейлист react-query на youtube](https://youtube.com/playlist?list=PL5MDzsMECm45ZzoJ0F2-50aAvbbNd47_E)
 

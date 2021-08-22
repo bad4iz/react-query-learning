@@ -24,23 +24,19 @@ const Films = ({ queryKey }) => {
 
   return (
     <ul>
-      {Array(30)
-        .fill(0)
-        .map(() =>
-          data?.map((film) => (
-            <li key={film.url}>
-              <b>Film:</b>
-              <Link
-                to={film.url.replace(
-                  /https:\/\/swapi.dev\/api\/films\//g,
-                  '',
-                )}
-              >
-                {film.title}
-              </Link>
-            </li>
-          )),
-        )}
+      {data?.map((film) => (
+        <li key={film.url}>
+          <b>Film:</b>
+          <Link
+            to={film.url.replace(
+              /https:\/\/swapi.dev\/api\/films\//g,
+              '',
+            )}
+          >
+            {film.title}
+          </Link>
+        </li>
+      ))}
     </ul>
   );
 };

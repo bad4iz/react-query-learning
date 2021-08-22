@@ -52,6 +52,16 @@ const FilmPage = () => {
         <strong>description:</strong>
         <p>{data.opening_crawl}</p>
       </div>
+      <button
+        onClick={() =>
+          queryClient.invalidateQueries([
+            'film',
+            url,
+          ])
+        }
+      >
+        обновить данные
+      </button>
       {isFetching
         ? `Обновление ... #${count}`
         : null}
