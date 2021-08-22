@@ -7,18 +7,33 @@ import {
 import { ReactQueryDevtools } from 'react-query/devtools';
 
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
+import FilmPage from './FilmPage';
 
 // Create a client
 export const queryClient = new QueryClient();
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <div className="App">
-        <Films />
-      </div>
-      <ReactQueryDevtools />
-    </QueryClientProvider>
+    <Router>
+      <QueryClientProvider client={queryClient}>
+        <div className="App">
+          <Switch>
+            <Route path={'/:filmId'}>
+              <FilmPage />
+            </Route>
+            <Route path={'/'}>
+              <Films />
+            </Route>
+          </Switch>
+        </div>
+        <ReactQueryDevtools />
+      </QueryClientProvider>
+    </Router>
   );
 }
 
