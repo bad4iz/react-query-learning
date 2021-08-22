@@ -6,6 +6,8 @@ import {
 
 import { ReactQueryDevtools } from 'react-query/devtools';
 
+import './App.css';
+
 // Create a client
 export const queryClient = new QueryClient();
 

@@ -1,5 +1,5 @@
 # React Query learning
-## 21. инициализируем наши данные из кэша #2 | react-query
+## 22. обрабатываем положительный ответ | react-query
 ### [видео]()  
 ### [плейлист react-query на youtube](https://youtube.com/playlist?list=PL5MDzsMECm45ZzoJ0F2-50aAvbbNd47_E)
 
