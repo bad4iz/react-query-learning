@@ -3,7 +3,8 @@
 
 [плейлист react-query на youtube](https://youtube.com/playlist?list=PL5MDzsMECm45ZzoJ0F2-50aAvbbNd47_E)
 
-Само видео [17. пишем сложный запрос | react-query](https://youtu.be/MRr3VJ2wsC0)
+Само видео   
+[![16. настраиваем повтор запроса при ошибке | react-query](https://yt-embed.herokuapp.com/embed?v=MRr3VJ2wsC0)](https://youtu.be/MRr3VJ2wsC0)
 ## Available Scripts
 
 In the project directory, you can run:
