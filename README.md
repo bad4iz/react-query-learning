@@ -1,6 +1,8 @@
 # React Query learning
 ## 19. реализуем подобие пагинации | react-query
-### [видео]()  
+Само видео   
+[![19. реализуем подобие пагинации | react-query](https://yt-embed.herokuapp.com/embed?v=uns33VFwxOs)](https://youtu.be/uns33VFwxOs)
+
 ### [плейлист react-query на youtube](https://youtube.com/playlist?list=PL5MDzsMECm45ZzoJ0F2-50aAvbbNd47_E)
 
 ## Available Scripts
