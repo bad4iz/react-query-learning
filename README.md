@@ -1,6 +1,6 @@
 # React Query learning
 ## 23. подключаем react router и приходим туда от куда жмякали | react-query
-### [видео]()  
+[![23. подключаем react router и приходим туда от куда жмякали | react-query](https://img.youtube.com/vi/mchiRNciG70/0.jpg)](https://youtu.be/mchiRNciG70)
 ### [плейлист react-query на youtube](https://youtube.com/playlist?list=PL5MDzsMECm45ZzoJ0F2-50aAvbbNd47_E)
 
 ## Available Scripts
