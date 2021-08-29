@@ -1,6 +1,6 @@
 # React Query learning
-## 27. Делаем все сразу для всех | react-query
-[![27. Делаем все сразу для всех | react-query](https://img.youtube.com/vi/N93ojKjIr2U/0.jpg)](https://youtu.be/N93ojKjIr2U)
+## 27. Работает с кешем как с группой | react-query
+[![27. Работает с кешем как с группой | react-query](https://img.youtube.com/vi/1otqXXxCH0g/0.jpg)](https://youtu.be/1otqXXxCH0g)
 ### [плейлист react-query на youtube](https://youtube.com/playlist?list=PL5MDzsMECm45ZzoJ0F2-50aAvbbNd47_E)
 
 ## Available Scripts
