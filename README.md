@@ -1,6 +1,6 @@
 # React Query learning
-## 26. Обновляем наши данные когда компонент не активный | react-query
-[![26. Обновляем наши данные когда компонент не активный | react-query](https://img.youtube.com/vi/N93ojKjIr2U/0.jpg)](https://youtu.be/N93ojKjIr2U)
+## 27. Делаем все сразу для всех | react-query
+[![27. Делаем все сразу для всех | react-query](https://img.youtube.com/vi/N93ojKjIr2U/0.jpg)](https://youtu.be/N93ojKjIr2U)
 ### [плейлист react-query на youtube](https://youtube.com/playlist?list=PL5MDzsMECm45ZzoJ0F2-50aAvbbNd47_E)
 
 ## Available Scripts

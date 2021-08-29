@@ -23,21 +23,32 @@ const Films = ({ queryKey }) => {
   const { data } = useGetFilms();
 
   return (
-    <ul>
-      {data?.map((film) => (
-        <li key={film.url}>
-          <b>Film:</b>
-          <Link
-            to={film.url.replace(
-              /https:\/\/swapi.dev\/api\/films\//g,
-              '',
-            )}
-          >
-            {film.title}
-          </Link>
-        </li>
-      ))}
-    </ul>
+    <>
+      <button
+        onClick={() =>
+          queryClient.invalidateQueries('film', {
+            refetchInactive: true,
+          })
+        }
+      >
+        обновить все
+      </button>
+      <ul>
+        {data?.map((film) => (
+          <li key={film.url}>
+            <b>Film:</b>
+            <Link
+              to={film.url.replace(
+                /https:\/\/swapi.dev\/api\/films\//g,
+                '',
+              )}
+            >
+              {film.title}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </>
   );
 };
 
