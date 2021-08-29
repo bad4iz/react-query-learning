@@ -1,6 +1,6 @@
 # React Query learning
 ## 25. Старим наш кэш программно | react-query
-[![25. Старим наш кэш программно | react-query](https://img.youtube.com/vi/N93ojKjIr2U/0.jpg)](https://youtu.be/N93ojKjIr2U)
+[![25. Старим наш кэш программно | react-query](https://img.youtube.com/vi/iBrDektkge0/0.jpg)](https://youtu.be/iBrDektkge0)
 ### [плейлист react-query на youtube](https://youtube.com/playlist?list=PL5MDzsMECm45ZzoJ0F2-50aAvbbNd47_E)
 
 ## Available Scripts
