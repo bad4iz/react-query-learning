@@ -7,6 +7,46 @@ import {
 } from 'react-router-dom/cjs/react-router-dom';
 import { Link } from 'react-router-dom';
 
+const FilmPageWrapper = () => {
+  const { filmId } = useParams();
+  const url = `https://swapi.dev/api/films/${filmId}/`;
+  const [isShow, toggle] = useReducer(
+    (isShow) => !isShow,
+    true,
+  );
+  return (
+    <>
+      <button onClick={toggle}>
+        переключить видимость
+      </button>
+      <button
+        onClick={() =>
+          queryClient.invalidateQueries(
+            ['film', url],
+            {
+              refetchActive: false,
+            },
+          )
+        }
+      >
+        сделать наши данные старыми
+      </button>
+      <button
+        onClick={() =>
+          queryClient.invalidateQueries(
+            ['film', url],
+            {
+              refetchInactive: true,
+            },
+          )
+        }
+      >
+        обновить данные в inactive
+      </button>
+      {isShow ? <FilmPage /> : null}
+    </>
+  );
+};
 const FilmPage = () => {
   const { filmId } = useParams();
   const history = useHistory();
@@ -72,4 +112,4 @@ const FilmPage = () => {
   );
 };
 
-export default FilmPage;
+export default FilmPageWrapper;
