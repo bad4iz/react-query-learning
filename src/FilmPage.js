@@ -27,6 +27,7 @@ const FilmPage = () => {
           fetch(url).then((res) => res.json()),
         ),
       {
+        staleTime: Infinity,
         onSuccess: (data) => {
           increment();
         },
@@ -54,13 +55,15 @@ const FilmPage = () => {
       </div>
       <button
         onClick={() =>
-          queryClient.invalidateQueries([
-            'film',
-            url,
-          ])
+          queryClient.invalidateQueries(
+            ['film', url],
+            {
+              refetchActive: false,
+            },
+          )
         }
       >
-        обновить данные
+        сделать наши данные старыми
       </button>
       {isFetching
         ? `Обновление ... #${count}`
