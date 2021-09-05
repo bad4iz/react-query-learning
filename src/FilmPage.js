@@ -14,13 +14,8 @@ const FilmPageWrapper = () => {
   const url = `https://swapi.dev/api/films/${filmId}/`;
   const [isShow, toggle] = useReducer(
     (isShow) => !isShow,
-    false,
+    true,
   );
-  useEffect(() => {
-    queryClient.prefetchQuery(['film', url], () =>
-      fetchFilm(url),
-    );
-  });
 
   return (
     <>
@@ -39,7 +34,7 @@ const FilmPageWrapper = () => {
   );
 };
 
-const fetchFilm = (url) =>
+export const fetchFilm = (url) =>
   new Promise((resolve) =>
     setTimeout(resolve, 2000),
   ).then(() =>
