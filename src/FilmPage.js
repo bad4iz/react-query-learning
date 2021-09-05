@@ -1,52 +1,51 @@
-import React, { useReducer } from 'react';
+import React, {
+  useEffect,
+  useReducer,
+} from 'react';
 import { useQuery } from 'react-query';
 import { queryClient } from './App';
 import {
   useHistory,
   useParams,
 } from 'react-router-dom/cjs/react-router-dom';
-import { Link } from 'react-router-dom';
 
 const FilmPageWrapper = () => {
   const { filmId } = useParams();
   const url = `https://swapi.dev/api/films/${filmId}/`;
   const [isShow, toggle] = useReducer(
     (isShow) => !isShow,
-    true,
+    false,
   );
+  useEffect(() => {
+    queryClient.prefetchQuery(['film', url], () =>
+      fetchFilm(url),
+    );
+  });
+
   return (
     <>
+      Lorem ipsum dolor sit amet, consectetur
+      adipisicing elit. Assumenda aut debitis
+      delectus deleniti eveniet id in ipsam iste,
+      maxime necessitatibus optio possimus quia
+      tempora. Consequuntur error excepturi sequi.
+      Illum, rerum.
+      <br />
       <button onClick={toggle}>
-        переключить видимость
-      </button>
-      <button
-        onClick={() =>
-          queryClient.invalidateQueries(
-            ['film', url],
-            {
-              refetchActive: false,
-            },
-          )
-        }
-      >
-        сделать наши данные старыми
-      </button>
-      <button
-        onClick={() =>
-          queryClient.invalidateQueries(
-            ['film', url],
-            {
-              refetchInactive: true,
-            },
-          )
-        }
-      >
-        обновить данные в inactive
+        {toggle ? 'показать детально' : 'скрыть'}
       </button>
       {isShow ? <FilmPage /> : null}
     </>
   );
 };
+
+const fetchFilm = (url) =>
+  new Promise((resolve) =>
+    setTimeout(resolve, 2000),
+  ).then(() =>
+    fetch(url).then((res) => res.json()),
+  );
+
 const FilmPage = () => {
   const { filmId } = useParams();
   const history = useHistory();
@@ -60,12 +59,7 @@ const FilmPage = () => {
   const { data, isLoading, isFetching } =
     useQuery(
       ['film', url],
-      () =>
-        new Promise((resolve) =>
-          setTimeout(resolve, 2000),
-        ).then(() =>
-          fetch(url).then((res) => res.json()),
-        ),
+      () => fetchFilm(url),
       {
         staleTime: Infinity,
         onSuccess: (data) => {
