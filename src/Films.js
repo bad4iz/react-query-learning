@@ -33,6 +33,7 @@ const Films = ({ queryKey }) => {
               queryClient.prefetchQuery(
                 ['film', film.url],
                 () => fetchFilm(film.url),
+                { staleTime: Infinity },
               );
             }}
           >
