@@ -2,7 +2,7 @@
 ## 28. prefetchQuery | react-query
 Предварительная выборка запроса до того, как он понадобится.  
 
-[![28. prefetchQuery | react-query](https://img.youtube.com/vi/N93ojKjIr2U/0.jpg)](https://youtu.be/N93ojKjIr2U)
+[![28. prefetchQuery | react-query](https://img.youtube.com/vi/BQiqy4kleVY/0.jpg)](https://youtu.be/BQiqy4kleVY)
 ### [плейлист react-query на youtube](https://youtube.com/playlist?list=PL5MDzsMECm45ZzoJ0F2-50aAvbbNd47_E)
 
 ## Available Scripts
