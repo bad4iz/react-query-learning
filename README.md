@@ -1,8 +1,8 @@
 # React Query learning
-## 29. prefetchQuery #2 | react-query
+## 30. prefetchQuery #3 | react-query
 Предварительная выборка запроса до того, как он понадобится.  
 
-[![29. prefetchQuery #2 | react-query](https://img.youtube.com/vi//0.jpg)](https://youtu.be/)
+[![30. prefetchQuery #3 | react-query](https://img.youtube.com/vi//0.jpg)](https://youtu.be/)
 ### [плейлист react-query на youtube](https://youtube.com/playlist?list=PL5MDzsMECm45ZzoJ0F2-50aAvbbNd47_E)
 
 ## Available Scripts
