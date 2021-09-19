@@ -1,8 +1,7 @@
 # React Query learning
-## 30. prefetchQuery #3 | react-query
-Предварительная выборка запроса до того, как он понадобится.  
+## 32. первая мутация | react-query
 
-[![30. prefetchQuery #3 | react-query](https://img.youtube.com/vi//0.jpg)](https://youtu.be/)
+[![32. первая мутация | react-query](https://img.youtube.com/vi//0.jpg)](https://youtu.be/)
 ### [плейлист react-query на youtube](https://youtube.com/playlist?list=PL5MDzsMECm45ZzoJ0F2-50aAvbbNd47_E)
 
 ## Available Scripts
