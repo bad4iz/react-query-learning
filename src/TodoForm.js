@@ -8,17 +8,19 @@ export const TodoForm = () => {
     target: { value = '' } = {},
   }) => setTodo(value);
 
-  const  {mutate, ...other} = useMutation(
-    (todo)=>
-    fetch('api/todos', {
-    method: 'POST',
-    body: todo,
-  }), {
-      onSuccess: ()=>{
-        setTodo('')
-        queryClient.invalidateQueries('todos')
-      }
-    })
+  const { mutate, ...other } = useMutation(
+    (todo) =>
+      fetch('api/todos', {
+        method: 'POST',
+        body: todo,
+      }),
+    {
+      onSuccess: () => {
+        setTodo('');
+        queryClient.invalidateQueries('todos');
+      },
+    },
+  );
 
   return (
     <div>
@@ -28,15 +30,15 @@ export const TodoForm = () => {
         disabled={other.isLoading}
         onChange={onChangeInput}
       />
-      <button onClick={()=>mutate(todo)}>{
-        other.isLoading
+      <button onClick={() => mutate(todo)}>
+        {other.isLoading
           ? 'сохранение'
           : other.isError
           ? 'ошибка запроса'
           : other.isSuccess
           ? 'сохранено'
-          : 'сохранить'
-      }</button>
+          : 'сохранить'}
+      </button>
     </div>
   );
 };

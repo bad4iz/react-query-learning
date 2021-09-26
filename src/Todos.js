@@ -5,7 +5,9 @@ const todosMock = ['прочитать', 'обновить'];
 fetchMock.get('api/todos', todosMock);
 fetchMock.post('api/todos', async (_, res) => {
   todosMock.push(res.body);
-  await new Promise((resolve)=>setTimeout(resolve,200));
+  await new Promise((resolve) =>
+    setTimeout(resolve, 200),
+  );
   return 200;
 });
 
