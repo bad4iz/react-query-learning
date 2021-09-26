@@ -13,9 +13,17 @@ export const TodoForm = () => {
       fetch('api/todos', {
         method: 'POST',
         body: todo,
+      }).then((res) => {
+        console.log(res);
+        if (!res.ok) {
+          throw new Error(res.statusText);
+        }
       }),
     {
-      onSuccess: () => {
+      onError: (error) => {
+        alert(error);
+      },
+      onSettled: () => {
         setTodo('');
         queryClient.invalidateQueries('todos');
       },
@@ -39,6 +47,9 @@ export const TodoForm = () => {
           ? 'сохранено'
           : 'сохранить'}
       </button>
+      <div>
+        {other.error ? other.error.message : ''}
+      </div>
     </div>
   );
 };
