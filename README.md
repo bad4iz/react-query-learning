@@ -1,7 +1,7 @@
 # React Query learning
-## 32. первая мутация | react-query
+## 33. обработка ошибок при мутации | react-query
 
-[![32. первая мутация | react-query](https://img.youtube.com/vi//0.jpg)](https://youtu.be/)
+[![33. обработка ошибок при мутации | react-query](https://img.youtube.com/vi//0.jpg)](https://youtu.be/)
 ### [плейлист react-query на youtube](https://youtube.com/playlist?list=PL5MDzsMECm45ZzoJ0F2-50aAvbbNd47_E)
 
 ## Available Scripts
