@@ -13,11 +13,6 @@ export const TodoForm = () => {
       fetch('api/todos', {
         method: 'POST',
         body: todo,
-      }).then((res) => {
-        console.log(res);
-        if (!res.ok) {
-          throw new Error(res.statusText);
-        }
       }),
     {
       onError: (error) => {
