@@ -9,14 +9,20 @@ const wrongWord = ['курить', 'выпить'];
 // todos
 fetchMock.get('api/todos', todosMock);
 
-fetchMock.post('api/todos', (_, res) => {
+fetchMock.post('api/todos', async (_, res) => {
+  await new Promise((resolve) =>
+    setTimeout(resolve, 3000),
+  );
   const isWrong = wrongWord.includes(res.body);
   if (isWrong) {
     return {
       throws: new TypeError('Это плохое дело'),
     };
   }
-  todosMock.push(res.body);
+  todosMock.push({
+    id: new Date().getTime(),
+    name: res.body,
+  });
   return 200;
 });
 
