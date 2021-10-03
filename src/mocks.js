@@ -7,7 +7,12 @@ const todosMock = [
 const wrongWord = ['курить', 'выпить'];
 
 // todos
-fetchMock.get('api/todos', todosMock);
+fetchMock.get('api/todos', async () => {
+  await new Promise((resolve) =>
+    setTimeout(resolve, 3000),
+  );
+  return todosMock;
+});
 
 fetchMock.post('api/todos', async (_, res) => {
   await new Promise((resolve) =>
