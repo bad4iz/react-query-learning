@@ -15,11 +15,23 @@ export const TodoForm = () => {
         body: todo,
       }),
     {
+      onMutate: (value) => {
+        queryClient.setQueryData(
+          ['todos'],
+          (oldTodos) => [
+            ...oldTodos,
+            {
+              id: new Date().getTime(),
+              name: value,
+            },
+          ],
+        );
+        setTodo('');
+      },
       onError: (error) => {
         alert(error);
       },
       onSettled: () => {
-        setTodo('');
         queryClient.invalidateQueries('todos');
       },
     },

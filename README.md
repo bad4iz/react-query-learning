@@ -1,8 +1,9 @@
 # React Query learning
 ## 34. мутация задачи | react-query
 
-[![34. мутация задачи | react-query](https://img.youtube.com/vi//0.jpg)](https://youtu.be/)
+[![35. оптимистическое обновление | react-query](https://img.youtube.com/vi//0.jpg)](https://youtu.be/)
 ### [плейлист react-query на youtube](https://youtube.com/playlist?list=PL5MDzsMECm45ZzoJ0F2-50aAvbbNd47_E)
+
 
 ## Available Scripts
 In the project directory, you can run:
