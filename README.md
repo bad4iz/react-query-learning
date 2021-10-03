@@ -1,7 +1,7 @@
 # React Query learning
-## 34. мутация задачи | react-query
+## 36. откат оптимистического обновления  | react-query
 
-[![35. оптимистическое обновление | react-query](https://img.youtube.com/vi//0.jpg)](https://youtu.be/)
+[![36. откат оптимистического обновления | react-query](https://img.youtube.com/vi//0.jpg)](https://youtu.be/)
 ### [плейлист react-query на youtube](https://youtube.com/playlist?list=PL5MDzsMECm45ZzoJ0F2-50aAvbbNd47_E)
 
 

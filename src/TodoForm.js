@@ -16,6 +16,8 @@ export const TodoForm = () => {
       }),
     {
       onMutate: (value) => {
+        const oldTodos =
+          queryClient.getQueryData('todos');
         queryClient.setQueryData(
           ['todos'],
           (oldTodos) => [
@@ -27,8 +29,16 @@ export const TodoForm = () => {
           ],
         );
         setTodo('');
+        return () =>
+          queryClient.setQueryData(
+            'todos',
+            oldTodos,
+          );
       },
-      onError: (error) => {
+      onError: (error, value, rollback) => {
+        if (typeof rollback === 'function') {
+          rollback();
+        }
         alert(error);
       },
       onSettled: () => {
