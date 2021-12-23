@@ -1,7 +1,7 @@
 # React Query learning
 ## 34. мутация задачи | react-query
 
-[![34. мутация задачи | react-query](https://img.youtube.com/vi//0.jpg)](https://youtu.be/)
+[![34. мутация задачи | react-query](https://img.youtube.com/vi/ve0PMoY8RiU/0.jpg)](https://youtu.be/ve0PMoY8RiU)
 ### [плейлист react-query на youtube](https://youtube.com/playlist?list=PL5MDzsMECm45ZzoJ0F2-50aAvbbNd47_E)
 
 ## Available Scripts
