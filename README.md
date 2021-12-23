@@ -1,7 +1,7 @@
 # React Query learning
 ## 36. откат оптимистичного обновления  | react-query
 
-[![36. откат оптимистичного обновления | react-query](https://img.youtube.com/vi//0.jpg)](https://youtu.be/)
+[![36. откат оптимистичного обновления | react-query](https://img.youtube.com/vi/LLw_y6uOHtc/0.jpg)](https://youtu.be/LLw_y6uOHtc)
 ### [плейлист react-query на youtube](https://youtube.com/playlist?list=PL5MDzsMECm45ZzoJ0F2-50aAvbbNd47_E)
 
 
