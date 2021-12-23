@@ -1,7 +1,7 @@
 # React Query learning
 ## 35. оптимистичное обновление  | react-query
 
-[![35. оптимистичное обновление | react-query](https://img.youtube.com/vi/ve0PMoY8RiU/0.jpg)](https://youtu.be/ve0PMoY8RiU
+[![35. оптимистичное обновление | react-query](https://img.youtube.com/vi/7HVkrXsqQEw/0.jpg)](https://youtu.be/7HVkrXsqQEw
 ### [плейлист react-query на youtube](https://youtube.com/playlist?list=PL5MDzsMECm45ZzoJ0F2-50aAvbbNd47_E)
 
 ## Available Scripts
