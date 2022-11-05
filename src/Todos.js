@@ -1,20 +1,34 @@
-import { useQuery } from 'react-query';
-import { TodoForm } from './TodoForm';
+import {
+  useQuery,
+  useQueryClient,
+} from 'react-query';
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
+const fetchTodos = async ({ queryKey }) => {
+  const [_, page] = queryKey;
+  return fetch(`api/todos?page=${page}`).then(
+    (res) => res.json(),
+  );
+};
 export const Todos = () => {
+  const [page, setPage] = useState(0);
   const {
     data: todos = [],
     isLoading,
     isFetching,
-  } = useQuery(['todos'], async () => {
-    await new Promise((resolve) =>
-      setTimeout(resolve, 2000),
-    );
-    return fetch('api/todos').then((res) =>
-      res.json(),
-    );
+    isPreviousData,
+  } = useQuery(['todos', page], fetchTodos, {
+    keepPreviousData: true,
   });
+
+  const queryClient = useQueryClient();
+  useEffect(() => {
+    queryClient.prefetchQuery(
+      ['todos', page + 1],
+      fetchTodos,
+    );
+  }, [page]);
 
   return isLoading ? (
     'загрузка...'
@@ -33,7 +47,19 @@ export const Todos = () => {
         ))}
       </ul>
 
-      <TodoForm />
+      <button
+        onClick={() => setPage(page - 1)}
+        disabled={page < 1}
+      >
+        предыдущая
+      </button>
+      {page}
+      <button
+        onClick={() => setPage(page + 1)}
+        disabled={isPreviousData}
+      >
+        следующая
+      </button>
     </div>
   );
 };
