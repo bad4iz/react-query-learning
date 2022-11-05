@@ -3,15 +3,20 @@ import fetchMock from 'fetch-mock';
 const todosMock = [
   { id: 1, name: 'прочитать' },
   { id: 2, name: 'обновить' },
+  { id: 3, name: 'обновить 3' },
 ];
 const wrongWord = ['курить', 'выпить'];
 
 // todos
-fetchMock.get('api/todos', async () => {
+fetchMock.get('begin:/api/todos', async (url) => {
+  console.log(url);
   await new Promise((resolve) =>
     setTimeout(resolve, 3000),
   );
-  return todosMock;
+  return new Array(10).fill(1).map((item) => ({
+    id: Math.random() * 100,
+    name: Math.random() * 100,
+  }));
 });
 
 fetchMock.post('api/todos', async (_, res) => {
