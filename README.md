@@ -23,3 +23,4 @@
 34. мутация задачи | https://github.com/bad4iz/react-query-learning/tree/lesson/%2334
 35. оптимистичное обновление | https://github.com/bad4iz/react-query-learning/tree/lesson/%2335
 36. откат оптимистичного обновления | https://github.com/bad4iz/react-query-learning/tree/lesson/%2336
+37. Пагинация | https://github.com/bad4iz/react-query-learning/tree/lesson/%2337
