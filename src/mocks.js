@@ -11,7 +11,7 @@ const wrongWord = ['курить', 'выпить'];
 fetchMock.get('begin:/api/todos', async (url) => {
   console.log(url);
   await new Promise((resolve) =>
-    setTimeout(resolve, 3000),
+    setTimeout(resolve, 1000),
   );
   return new Array(10).fill(1).map((item) => ({
     id: Math.random() * 100,
