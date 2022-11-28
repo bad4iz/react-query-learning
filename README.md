@@ -1,7 +1,7 @@
 # React Query learning
 ## 38. Бесконечный запрос | react-query
 
-[![38. Бесконечный запрос | react-query](https://img.youtube.com/vi/NZ6rHDn5QnI/0.jpg)](https://youtu.be/NZ6rHDn5QnI)
+[![38. Бесконечный запрос | react-query](https://img.youtube.com/vi/W7a1sSiHvV0/0.jpg)](https://youtu.be/W7a1sSiHvV0)
 ### [плейлист react-query на youtube](https://youtube.com/playlist?list=PL5MDzsMECm45ZzoJ0F2-50aAvbbNd47_E)
 
 
