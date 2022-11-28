@@ -1,7 +1,7 @@
 # React Query learning
 ## 39. Бесконечный запрос при скроле | react-query
 
-[![39. Бесконечный запрос при скроле  | react-query](https://img.youtube.com/vi/NZ6rHDn5QnI/0.jpg)](https://youtu.be/NZ6rHDn5QnI)
+[![39. Бесконечный запрос при скроле  | react-query](https://img.youtube.com/vi/EqQgUs0kH1s/0.jpg)](https://youtu.be/EqQgUs0kH1s)
 ### [плейлист react-query на youtube](https://youtube.com/playlist?list=PL5MDzsMECm45ZzoJ0F2-50aAvbbNd47_E)
 
 
